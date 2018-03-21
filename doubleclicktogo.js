@@ -3,7 +3,7 @@
  */
 /**
  * Double-Click-To-Go plugin
- * Copyright 2018
+ * Copyright 2018 Bryan Noriega Miguel
  * @author Bryan Noriega Miguel
  * @version 1.0
  * @see https://github.com/melicard/Double-Click-To-Go
