@@ -4,8 +4,8 @@
 /**
  * Double-Click-To-Go plugin
  * Copyright 2018
- * @author Bryan Noriega
- * @version 1
+ * @author Bryan Noriega Miguel
+ * @version 1.0
  * @see https://github.com/melicard/Double-Click-To-Go
  */
 (function ($) {
