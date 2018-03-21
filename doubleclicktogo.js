@@ -17,14 +17,15 @@
             $(this).click(function (e) {
                 e.preventDefault();
                 e.stopPropagation();
-                if ((new Date().getTime() / 1000 - firstClickTime > secondForDoubleClick)){
+                var currentTime = new Date().getTime() / 1000;
+                if ((currentTime - firstClickTime > secondForDoubleClick)){
                     firstClickTime = null;
                 }
                 if (firstClickTime == null) {
-                    firstClickTime = new Date().getTime() / 1000
+                    firstClickTime = currentTime
                     secondClickTime = null;
                 } else {          
-                    secondClickTime = new Date().getTime() / 1000;
+                    secondClickTime = currentTime
                     console.log((secondClickTime - firstClickTime))
                     if ((secondClickTime - firstClickTime) <= secondForDoubleClick) {
                         firstClickTime = null;
