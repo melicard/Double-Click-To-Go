@@ -1,7 +1,7 @@
 Double-Click-To-Go
 ============
 
-Makes necessary double click in an a tag to follow the link. Built as jQuery Plugin.
+Double-click on a <a> tag to follow the link. Built as jQuery Plugin.
 
 Dependencies
 ============
