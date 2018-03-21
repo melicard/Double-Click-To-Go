@@ -1,16 +1,32 @@
-﻿(function ($) {
+/*
+ Available for use under the MIT License
+ */
+/**
+ * Double-Click-To-Go plugin
+ * Copyright 2018
+ * @author Bryan Noriega
+ * @version 1
+ * @see https://github.com/melicard/Double-Click-To-Go
+ */
+(function ($) {
     $.fn.doubleClickToGo = function () {
         var secondForDoubleClick = .5; //Add more seconds to increase the interval when two click are considered double click
         var firstClickTime = null;
         var secondClickTime = null;
         this.filter("a").each(function () {
-            $(this).click(function () {
+            $(this).click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if ((new Date().getTime() / 1000 - firstClickTime > secondForDoubleClick)){
+                    firstClickTime = null;
+                }
                 if (firstClickTime == null) {
                     firstClickTime = new Date().getTime() / 1000
                     secondClickTime = null;
-                } else {
-                    secondClickTIme = new Date().getTime() / 1000;
-                    if ((secondClickTIme - firstClickTime) <= secondForDoubleClick) {
+                } else {          
+                    secondClickTime = new Date().getTime() / 1000;
+                    console.log((secondClickTime - firstClickTime))
+                    if ((secondClickTime - firstClickTime) <= secondForDoubleClick) {
                         firstClickTime = null;
                         secondClickTime = null;
                         var link = $(this);
