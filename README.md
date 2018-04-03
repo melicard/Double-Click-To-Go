@@ -1,7 +1,7 @@
 Double-Click-To-Go
 ============
 
-Double-click on a <a> tag to follow the link. Built as jQuery Plugin.
+doubleClickToGo.js is a tiny yet useful jQuery plugin that makes a link open on double click instead of single click. Useful for multi-level navigation where the user needs to toggle submenus with single click. Built as jQuery Plugin.
 
 Dependencies
 ============
