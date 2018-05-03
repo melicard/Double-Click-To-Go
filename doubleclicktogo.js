@@ -16,7 +16,6 @@
         this.filter("a").each(function () {
             $(this).click(function (e) {
                 e.preventDefault();
-                e.stopPropagation();
                 var currentTime = new Date().getTime() / 1000;
                 if ((currentTime - firstClickTime > secondForDoubleClick)){
                     firstClickTime = null;
